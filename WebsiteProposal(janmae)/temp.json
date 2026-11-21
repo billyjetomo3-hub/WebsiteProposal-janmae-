@@ -1,0 +1,22 @@
+{
+  "batchcomplete": "",
+  "continue": { "gsroffset": 1, "continue": "gsroffset||" },
+  "query": {
+    "pages": {
+      "48092778": {
+        "pageid": 48092778,
+        "ns": 6,
+        "title": "File:Espaguetis carbonara.jpg",
+        "index": 1,
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Espaguetis_carbonara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Espaguetis_carbonara.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=48092778"
+          }
+        ]
+      }
+    }
+  }
+}

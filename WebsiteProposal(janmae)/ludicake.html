@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="BiteDash PH Filipino express food delivery"
+    />
+    <title>BiteDash PH | Mastered Filipino Express Food</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="ludicake.css" />
+  </head>
+  <body>
+    <div class="promo-banner">
+      <i class="fa-solid fa-fire"></i> EXPRESS PROMO: Free Halo-Halo Upgrade on
+      Orders Above ₱500! Code: <b>BITEDASH2026</b>
+    </div>
+    <header>
+      <div class="container nav-wrapper">
+        <a href="#home" class="logo"
+          ><img src="logo.svg" alt="BiteDash PH Logo" class="logo-image" /><span
+            class="logo-text"
+            ><strong>BiteDash PH</strong
+            ><small>Express Pinoy Feast</small></span
+          ></a
+        >
+        <nav>
+          <a href="#home">Home</a><a href="#menu">Menu</a
+          ><a href="#orders">Order Tracker</a><a href="#contact">Contact</a>
+          <button id="mobileAuthBtn" class="mobile-nav-auth" type="button">
+            <i class="fa-regular fa-user"></i> <span id="mobileAuthText">Sign In / Register</span>
+          </button>
+        </nav>
+        <div class="nav-actions">
+          <button
+            id="themeToggleBtn"
+            class="icon-btn"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            <i id="themeIcon" class="fa-solid fa-moon"></i></button
+          ><button
+            id="soundToggleBtn"
+            class="icon-btn"
+            type="button"
+            aria-label="Toggle sound"
+          >
+            <i id="soundIcon" class="fa-solid fa-volume-high"></i></button
+          >
+          <div id="authNavWrap" class="auth-nav-wrap">
+            <button id="openAuthBtn" class="auth-btn" type="button">
+              <i class="fa-regular fa-user"></i>
+              <span>Sign In</span>
+            </button>
+            <div id="userMenuWrap" class="user-menu-wrap" hidden>
+              <button id="userMenuBtn" class="user-pill-btn" type="button" aria-expanded="false" aria-haspopup="true">
+                <span class="user-avatar-mini" id="userAvatarMini">JD</span>
+                <span class="user-pill-name" id="navUserName">Juan</span>
+                <i class="fa-solid fa-chevron-down nav-caret"></i>
+              </button>
+              <div id="userDropdown" class="user-dropdown">
+                <div class="user-dropdown-header">
+                  <div class="user-dropdown-name" id="dropdownUserName">Juan Dela Cruz</div>
+                  <div class="user-dropdown-email" id="dropdownUserEmail">juan@bitedash.ph</div>
+                </div>
+                <div class="user-dropdown-divider"></div>
+                <button type="button" class="dropdown-item" id="dropdownProfileBtn">
+                  <i class="fa-solid fa-id-card"></i> My Profile
+                </button>
+                <button type="button" class="dropdown-item" id="dropdownOrdersBtn">
+                  <i class="fa-solid fa-receipt"></i> My Orders
+                </button>
+                <div class="user-dropdown-divider"></div>
+                <button type="button" class="dropdown-item dropdown-logout" id="dropdownLogoutBtn">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+                </button>
+              </div>
+            </div>
+          </div>
+          <button id="openCartBtn" class="cart-btn" type="button">
+            <i class="fa-solid fa-cart-shopping"></i> Cart
+            <b id="cartBadge" class="cart-badge">0</b>
+          </button>
+        </div>
+        <button id="mobileToggle" class="mobile-toggle icon-btn" type="button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section id="home" class="hero-section">
+        <div class="container hero-grid">
+          <div>
+            <span class="hero-pill"
+              ><i class="fa-solid fa-bolt"></i> Fastest Express Delivery in
+              Town</span
+            >
+            <h1 class="hero-title">
+              Craving Authentic<br /><span>Filipino Meals?</span>
+            </h1>
+            <p class="hero-desc">
+              Hot sizzling sisig, chicken inasal, crispy pata, and halo-halo
+              prepared fresh and delivered fast.
+            </p>
+            <div class="hero-cta">
+              <a href="#menu" class="btn-primary"
+                >Order Express Now <i class="fa-solid fa-arrow-right"></i></a
+              ><a href="#orders" class="btn-secondary"
+                ><i class="fa-solid fa-clock-rotate-left"></i> Live Tracker</a
+              >
+            </div>
+            <div class="hero-stats">
+              <div class="stat-card">
+                <b>25<span>min</span></b
+                ><small>Avg Delivery</small>
+              </div>
+              <div class="stat-card">
+                <b>4.9<span>★</span></b
+                ><small>10k+ Reviews</small>
+              </div>
+              <div class="stat-card">
+                <b>100<span>%</span></b
+                ><small>Hot & Fresh</small>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="visual-frame">
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80"
+                alt="Filipino meal"
+              />
+              <div class="floating-card">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                <div>
+                  <b>Chef's Express Pick</b
+                  ><small>Sizzling Pork Sisig + Garlic Rice</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="menu" class="menu-section container">
+        <div class="section-header">
+          <span class="section-tag">Express Pinoy Selection</span>
+          <h2 class="section-title">Explore Our Fresh Menu</h2>
+          <p>Select your favorite meals cooked fresh to order.</p>
+        </div>
+        <div class="menu-controls">
+          <label class="search-wrapper"
+            ><i class="fa-solid fa-magnifying-glass"></i
+            ><input
+              id="searchInput"
+              class="search-input"
+              type="search"
+              placeholder="Search dishes..."
+          /></label>
+          <div class="category-filters">
+            <button class="filter-btn active" data-category="All" type="button">
+              All Items</button
+            ><button class="filter-btn" data-category="Meals" type="button">
+              Meals</button
+            ><button class="filter-btn" data-category="Drinks" type="button">
+              Drinks</button
+            ><button class="filter-btn" data-category="Desserts" type="button">
+              Desserts</button
+            ><button class="filter-btn" data-category="Specials" type="button">
+              Specials
+            </button>
+          </div>
+        </div>
+        <div id="foodGrid" class="food-grid"></div>
+        <div id="emptyState" class="empty-state" hidden>
+          <i class="fa-solid fa-utensils"></i>
+          <h3>No matching dishes found</h3>
+          <p>Try another dish or reset your filters.</p>
+        </div>
+      </section>
+      <section id="orders" class="tracker-section">
+        <div class="container">
+          <div class="tracker-header">
+            <div>
+              <h2>Your Orders & Live Tracker</h2>
+              <p id="orderTrackerSubtitle">Track recent orders saved in your browser.</p>
+            </div>
+            <div class="tracker-controls">
+              <span id="trackerUserBadge" class="tracker-user-badge" hidden></span>
+              <button id="clearHistoryBtn" class="clear-btn" type="button">
+                <i class="fa-solid fa-trash-can"></i> Clear Order History
+              </button>
+            </div>
+          </div>
+          <div id="orderHistoryList" class="order-history-list"></div>
+        </div>
+      </section>
+      <section id="contact" class="contact-section container">
+        <div class="section-header">
+          <span class="section-tag">Need help?</span>
+          <h2 class="section-title">Contact BiteDash</h2>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <input required placeholder="Your name" /><input
+            required
+            type="email"
+            placeholder="Email address"
+          /><textarea required rows="4" placeholder="Your message"></textarea
+          ><button class="btn-primary" type="submit">
+            Send Message <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        © 2026 BiteDash PH · Fresh food, happy people.
+      </div>
+    </footer>
+    <div id="modalBackdrop" class="modal-backdrop"></div>
+    <aside id="cartDrawer" class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3><i class="fa-solid fa-basket-shopping"></i> Your Order Basket</h3>
+        <button id="closeCartBtn" class="close-btn" type="button">
+          &times;
+        </button>
+      </div>
+      <div id="cartItemsBody" class="cart-items-body"></div>
+      <div class="cart-footer">
+        <div class="summary-row">
+          <span>Subtotal</span><span id="cartSubtotal">₱0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Delivery Fee</span><span>₱45.00</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total Amount</span><span id="cartTotal">₱0.00</span>
+        </div>
+        <button id="checkoutBtn" class="btn-primary full" type="button">
+          Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </aside>
+    <div id="checkoutModal" class="dialog-modal">
+      <div class="dialog-heading">
+        <h3>Order Checkout</h3>
+        <button id="closeCheckoutBtn" class="close-btn" type="button">
+          &times;
+        </button>
+      </div>
+      <div id="checkoutAuthNotice" class="checkout-auth-banner"></div>
+      <form id="checkoutForm">
+        <label
+          >Full Name *<input
+            id="custName"
+            required
+            placeholder="e.g. Juan Dela Cruz" /></label
+        ><label
+          >Phone Number *<input
+            id="custPhone"
+            required
+            type="tel"
+            placeholder="09171234567" /></label
+        ><label
+          >Delivery Address *<textarea
+            id="custAddress"
+            required
+            rows="2"
+            placeholder="House/Unit No., Street, Barangay, City"
+          ></textarea></label
+        ><label
+          >Payment Method<select id="custPayment">
+            <option>Cash on Delivery (COD)</option>
+            <option>GCash / Maya e-Wallet</option>
+            <option>Credit / Debit Card</option>
+          </select></label
+        ><button class="btn-primary full" type="submit">
+          Confirm & Submit Order
+        </button>
+      </form>
+    </div>
+    <div id="receiptModal" class="dialog-modal receipt-modal">
+      <div class="dialog-heading">
+        <h3><i class="fa-solid fa-receipt"></i> Order Receipt</h3>
+        <button id="closeReceiptBtn" class="close-btn" type="button">
+          &times;
+        </button>
+      </div>
+      <div id="receiptContent" class="receipt-content"></div>
+      <div class="receipt-actions">
+        <button id="printReceiptBtn" class="btn-primary" type="button">
+          <i class="fa-solid fa-print"></i> Print Receipt</button
+        ><button id="closeReceiptActionBtn" class="btn-secondary" type="button">
+          Done
+        </button>
+      </div>
+    </div>
+    <!-- Authentication Modal (Login & Registration) -->
+    <div id="authModal" class="dialog-modal auth-modal" role="dialog" aria-modal="true">
+      <div class="dialog-heading auth-modal-header">
+        <div class="auth-tabs" role="tablist">
+          <button type="button" class="auth-tab-btn active" id="tabLoginBtn" role="tab" aria-selected="true">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In
+          </button>
+          <button type="button" class="auth-tab-btn" id="tabRegisterBtn" role="tab" aria-selected="false">
+            <i class="fa-solid fa-user-plus"></i> Register
+          </button>
+        </div>
+        <button id="closeAuthBtn" class="close-btn" type="button" aria-label="Close modal">&times;</button>
+      </div>
+
+      <!-- Sign In Panel -->
+      <div id="loginPanel" class="auth-panel active" role="tabpanel">
+        <div class="auth-intro">
+          <h4>Welcome Back to BiteDash!</h4>
+          <p>Sign in to access your saved delivery details and fast express ordering.</p>
+        </div>
+        <div id="loginAlert" class="auth-alert" hidden></div>
+        <form id="loginForm" novalidate>
+          <label for="loginEmail">
+            <span class="field-label-text">Email Address *</span>
+            <div class="input-with-icon">
+              <i class="fa-regular fa-envelope input-prefix-icon"></i>
+              <input id="loginEmail" type="email" placeholder="name@example.com" required autocomplete="email" />
+            </div>
+          </label>
+          <label for="loginPassword">
+            <span class="field-label-text">Password *</span>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-lock input-prefix-icon"></i>
+              <input id="loginPassword" type="password" placeholder="Enter your password" required autocomplete="current-password" />
+              <button type="button" class="pwd-toggle-btn" aria-label="Toggle password visibility" data-target="loginPassword">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </label>
+          <div class="auth-options-row">
+            <label class="checkbox-label" for="loginRemember">
+              <input type="checkbox" id="loginRemember" checked />
+              <span>Remember me</span>
+            </label>
+            <button type="button" id="fillDemoBtn" class="demo-fill-btn" title="Click to fill sample customer account">
+              <i class="fa-solid fa-bolt"></i> Demo Login
+            </button>
+          </div>
+          <button class="btn-primary full" type="submit" id="submitLoginBtn">
+            Sign In <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+        <div class="auth-footer-text">
+          Don't have an account yet?
+          <button type="button" class="auth-switch-link" id="switchToRegister">Create one now</button>
+        </div>
+      </div>
+      <!-- Register Panel -->
+      <div id="registerPanel" class="auth-panel" role="tabpanel" hidden>
+        <div class="auth-intro">
+          <h4>Create Your BiteDash Account</h4>
+          <p>Join BiteDash for 1-click express orders and live tracking.</p>
+        </div>
+        <div id="registerAlert" class="auth-alert" hidden></div>
+        <form id="registerForm" novalidate>
+          <div class="form-row-2">
+            <label for="regFullName">
+              <span class="field-label-text">Full Name *</span>
+              <div class="input-with-icon">
+                <i class="fa-regular fa-user input-prefix-icon"></i>
+                <input id="regFullName" type="text" placeholder="e.g. Maria Santos" required autocomplete="name" />
+              </div>
+            </label>
+            <label for="regPhone">
+              <span class="field-label-text">Mobile Number *</span>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-phone input-prefix-icon"></i>
+                <input id="regPhone" type="tel" placeholder="09171234567" required autocomplete="tel" />
+              </div>
+            </label>
+          </div>
+
+          <label for="regEmail">
+            <span class="field-label-text">Email Address *</span>
+            <div class="input-with-icon">
+              <i class="fa-regular fa-envelope input-prefix-icon"></i>
+              <input id="regEmail" type="email" placeholder="maria.santos@gmail.com" required autocomplete="email" />
+            </div>
+          </label>
+
+          <label for="regAddress">
+            <span class="field-label-text">Default Delivery Address <small>(Optional)</small></span>
+            <div class="input-with-icon textarea-icon">
+              <i class="fa-solid fa-location-dot input-prefix-icon"></i>
+              <textarea id="regAddress" rows="2" placeholder="House/Unit No., Street, Barangay, City" autocomplete="street-address"></textarea>
+            </div>
+          </label>
+
+          <div class="form-row-2">
+            <label for="regPassword">
+              <span class="field-label-text">Password * <small>(min 6 chars)</small></span>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-lock input-prefix-icon"></i>
+                <input id="regPassword" type="password" placeholder="Create password" required minlength="6" autocomplete="new-password" />
+                <button type="button" class="pwd-toggle-btn" aria-label="Toggle password visibility" data-target="regPassword">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+            </label>
+            <label for="regConfirmPassword">
+              <span class="field-label-text">Confirm Password *</span>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-shield-halved input-prefix-icon"></i>
+                <input id="regConfirmPassword" type="password" placeholder="Repeat password" required minlength="6" autocomplete="new-password" />
+                <button type="button" class="pwd-toggle-btn" aria-label="Toggle password visibility" data-target="regConfirmPassword">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+            </label>
+          </div>
+
+          <div class="password-strength" id="pwdStrengthWrap">
+            <div class="pwd-strength-bar"><div id="pwdStrengthMeter" class="strength-meter"></div></div>
+            <span id="pwdStrengthLabel" class="strength-label">Password strength: enter password</span>
+          </div>
+
+          <label class="checkbox-label terms-label" for="regTerms">
+            <input type="checkbox" id="regTerms" required />
+            <span>I agree to BiteDash express ordering guidelines and terms</span>
+          </label>
+
+          <button class="btn-primary full" type="submit" id="submitRegisterBtn">
+            Create Account & Sign In <i class="fa-solid fa-user-plus"></i>
+          </button>
+        </form>
+        <div class="auth-footer-text">
+          Already have an account?
+          <button type="button" class="auth-switch-link" id="switchToLogin">Sign in here</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Profile Modal -->
+    <div id="profileModal" class="dialog-modal profile-modal" role="dialog" aria-modal="true" aria-labelledby="profileHeading">
+      <div class="dialog-heading">
+        <h3 id="profileHeading"><i class="fa-solid fa-circle-user"></i> My BiteDash Account</h3>
+        <button id="closeProfileBtn" class="close-btn" type="button" aria-label="Close profile modal">&times;</button>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-avatar" id="profileAvatar">JD</div>
+        <div class="profile-header-info">
+          <h4 id="profileNameDisplay">Juan Dela Cruz</h4>
+          <p id="profileEmailDisplay">juan@bitedash.ph</p>
+          <span class="profile-badge"><i class="fa-solid fa-circle-check"></i> BiteDash Verified Customer</span>
+        </div>
+      </div>
+
+      <div class="profile-stats-row">
+        <div class="profile-stat-box">
+          <span class="stat-num" id="profileTotalOrders">0</span>
+          <span class="stat-lbl">My Orders</span>
+        </div>
+        <div class="profile-stat-box">
+          <span class="stat-num" id="profileTotalSpent">₱0.00</span>
+          <span class="stat-lbl">Total Spent</span>
+        </div>
+        <div class="profile-stat-box">
+          <span class="stat-num" id="profileMemberSince">2026</span>
+          <span class="stat-lbl">Member Since</span>
+        </div>
+      </div>
+
+      <form id="profileEditForm" class="profile-form">
+        <div id="profileAlert" class="auth-alert" hidden></div>
+        <label for="profileEditName">
+          <span class="field-label-text">Full Name *</span>
+          <input id="profileEditName" type="text" required />
+        </label>
+        <label for="profileEditPhone">
+          <span class="field-label-text">Phone Number *</span>
+          <input id="profileEditPhone" type="tel" required />
+        </label>
+        <label for="profileEditAddress">
+          <span class="field-label-text">Default Delivery Address</span>
+          <textarea id="profileEditAddress" rows="2" placeholder="House/Unit No., Street, Barangay, City"></textarea>
+        </label>
+        <div class="profile-actions">
+          <button type="submit" class="btn-primary">
+            <i class="fa-solid fa-floppy-disk"></i> Update Profile
+          </button>
+          <button type="button" id="profileLogoutBtn" class="btn-secondary logout-btn">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="toast" class="toast-notification" role="status">
+      <i class="fa-solid fa-circle-check"></i><span id="toastMsg"></span>
+    </div>
+    <script src="ludicake.js"></script>
+  </body>
+</html>
